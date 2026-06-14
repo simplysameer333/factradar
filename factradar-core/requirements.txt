@@ -1,0 +1,26 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+httpx
+langgraph
+langchain
+langchain-core
+langchain-ollama
+langchain-anthropic
+langchain-openai
+# Web search. Newer package is "ddgs"; "duckduckgo-search" is the older name.
+# retrieval.py imports whichever is installed.
+ddgs
+# Media stage (image OCR + audio/video transcription). These are imported lazily
+# in media.py, so a text-only deploy still runs without the system binaries below.
+#   - pytesseract needs the Tesseract OCR binary on the host (or set TESSERACT_CMD)
+#   - video-frame OCR needs ffmpeg on the host (or set FFMPEG_CMD)
+pytesseract
+Pillow
+faster-whisper
+# Download YouTube videos shared as links, then transcribe/OCR them (needs ffmpeg).
+yt-dlp
+# MongoDB audit trail (best-effort, lazy-connected in audit.py). dnspython is
+# required for the mongodb+srv:// Atlas connection string.
+pymongo
+dnspython

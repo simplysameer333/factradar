@@ -1,0 +1,40 @@
+# Secrets — NEVER commit. Contains the OpenAI key + MongoDB credentials.
+.env
+**/.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# WhatsApp session auth (per-user Baileys creds) — secrets, machine-local
+factradar-ingest/auth/
+**/auth/
+
+# Whisper / model caches, temp media
+*.tmp
+factradar_*/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local Claude Code settings (machine-specific)
+.claude/settings.local.json
+
+# Temp/dev helper scripts
+**/_wipe_db.py
+**/_cleanup_orphans.py

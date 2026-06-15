@@ -38,3 +38,7 @@ Thumbs.db
 # Temp/dev helper scripts
 **/_wipe_db.py
 **/_cleanup_orphans.py
+
+# run.sh runtime artifacts
+.logs/
+.pids/
